@@ -1,3 +1,10 @@
+/* Theme Name: Mobirus - Responsive Landing Page Template
+   Author: Themesdesign
+   Version: 1.0.0
+   Created: December 2012
+   File Description: Main CSS file of the template
+*/
+
 /****************************
 *   1  :  HELPER            *
 *   2  :  NAVBAR-CUSTOM     *
@@ -542,9 +549,7 @@ background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3
 .bg-features-color {
     background-color: #35b8e0;
 }
-.bg-features-color2 {
-    background-color: #f9c351;
-}
+
 .bg-video-color {
     background-color: #f9c851;
 }
@@ -579,7 +584,7 @@ background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3
 *******************/
 
 .bg-features {
-    background-image: url('/images/bg-features.jpg');
+    background-image: url('../images/bg-features.jpg');
     background-size: cover;
     position: relative;
     background-position: center center;
@@ -997,133 +1002,4 @@ background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3
         padding-bottom: 0px !important;
         padding-top: 0px !important;
     }
-}
-
-.navbar-brand-text {
-.navbar-brand {
-    display: flex;
-    align-items: center;
-}
-
-.navbar-brand-text {
-    font-size: 26px;
-    font-weight: 500;
-    color: #555;
-    margin-left: 16px;
-    vertical-align: top;
-}
-
-    .fp-tooltip.active {
-    background-color: #000; /* Set the background color */
-    color: #fff; /* Set the text color */
-    font-weight: bold; /* Make the text bold */
-    padding: 10px; /* Add some padding */
-    border-radius: 5px; /* Add some rounded corners */
-}
-
-
-
-.navbar-brand-text {
-    font-size: 16px;
-    font-weight: 500;
-    color: #fff;
-    margin-left: -15px;
-    margin-top: 25px;
-}
-* {
- margin: 0;
- padding: 0;
- box-sizing: border-box;
-}
-
-html {
- font-size: 62.5%;
-}
-
-body {
- font-family: "Mulish", sans-serif;
- height: 100vh;
- display: flex;
- justify-content: center;
- align-items: center;
-}
-
-main {
- width: 40rem;
- box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2);
- margin: 0 auto;
- height: 45rem;
- border-radius: 2rem;
- padding: 2rem;
-}
-
-h1 {
- text-align: center;
- font-size: 3rem;
- padding: 1rem 2rem;
-}
-
-form {
- margin: 3rem 0;
- display: flex;
- flex-direction: column;
- row-gap: 2rem;
-}
-
-.input__container {
- display: flex;
- flex-direction: column;
- row-gap: 0.5rem;
-}
-
-.input__container label { font-size: 1.6rem; }
-
-.input__container input,
-textarea {
- padding: 1rem 2rem;
- border-radius: 5px;
- border: 1px solid #555;
- resize: none;
-}
-
-button {
- align-self: flex-start;
- padding: 1rem 2rem;
- border-radius: 5px;
- border: none;
- background: #333;
- color: #fff;
- cursor: pointer;
-}
-.scroll-down-icon {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 24px;
-  color: #fff;
-  animation: blink 1s infinite;
-}
-/* Scroll down */
-.scroll-down-icon {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 24px;
-  color: #fff;
-  opacity: 0;
-  animation: blink 1s infinite;
-}
-
-@keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }

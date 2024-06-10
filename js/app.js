@@ -57,42 +57,23 @@
 
     }, 
 
-PogoApp.prototype.initFullPages = function() {
-    $('#fullpage').fullpage({
-        anchors: ['1stPage', '2ndPage', '3rdPage', '4thPage', '5thPage', '6thPage', '7thPage', '8thPage', '9thPage', '10thPage'],
-        menu: '#menu',
-        scrollingSpeed: 800,
-        autoScrolling: true,
-        scrollBar: true,
-        easing: 'easeInQuart',
-        resize: false,
-        paddingTop: '0px',
-        paddingBottom: '80px',
-        navigation: true,
-        navigationPosition: 'right',
-        navigationTooltips: ['Hjem', 'Om LAP', 'Organisation', 'Det mener LAP', 'Billeder', 'Bliver medlem', 'FAQ/OSS', 'Kontakt os'],
-        responsiveWidth: 1100,
-        showActiveTooltip: true,
-        css3: true,
-        fitToSection: true,
-        fitToSectionDelay: 1000,
-        scrollOverflow: true,
-        scrollOverflowOptions: {
-            scrollbars: true,
-            mouseWheel: true,
-            hideScrollbars: false,
-            fadeScrollbars: false,
-            disableMouse: true
-        },
-        onLeave: function(index, nextIndex, direction) {
-            // Add your custom code here
-        },
-        afterLoad: function(anchorLink, index) {
-            // Add your custom code here
-        }
-    });
-};
-
+    PogoApp.prototype.initFullPages = function() {
+        $("#fullpage").fullpage({
+            anchors: ['1stPage', '2ndPage', '3rdPage', '4thPage', '5thPage'],
+            menu: '#menu',
+            scrollingSpeed: 800,
+            autoScrolling: true,
+            scrollBar: true,
+            easing: 'easeInQuart',
+            resize : false,
+            paddingTop: '0px',
+            paddingBottom: '80px',
+            navigation: true,
+            navigationPosition: 'right',
+            navigationTooltips: ['Hjem', 'Organisation', 'Features', 'Det-mener-LAP', 'Faq', 'Kontakt'],
+            responsiveWidth: 1100,
+        });
+    },
 
     PogoApp.prototype.initVideo = function() {
         $('.video-play-icon').magnificPopup({
@@ -165,17 +146,3 @@ function($) {
     "use strict";
     $.PogoApp.init();
 }(window.jQuery);
-
-document.addEventListener('DOMContentLoaded', function() {
-  const scrollDownIcon = document.getElementById('scroll-down-icon');
-
-  window.addEventListener('scroll', function() {
-    if (window.pageYOffset === 0) {
-      // Show the scroll-down icon on the first page
-      scrollDownIcon.style.opacity = '1';
-    } else {
-      // Hide the scroll-down icon on other pages
-      scrollDownIcon.style.opacity = '0';
-    }
-  });
-});
