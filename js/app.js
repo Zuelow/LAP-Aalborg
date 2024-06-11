@@ -148,8 +148,6 @@ function($) {
 }(window.jQuery);
 const btn = document.getElementById('button');
 
-const btn = document.getElementById('button');
-
 document.getElementById('form')
  .addEventListener('submit', function(event) {
    event.preventDefault();
@@ -162,9 +160,32 @@ document.getElementById('form')
    emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
       btn.value = 'Send Email';
-      alert('Sent!');
+      alert('Sendt!');
     }, (err) => {
       btn.value = 'Send Email';
       alert(JSON.stringify(err));
     });
 });
+emailjs.init('MmqZ4ZGhQkbbuFCSD');
+
+document.getElementById('form').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  this.contact_number.value = (Math.random() * 100000) | 0; // replace with your own unique ID generator
+
+  emailjs.sendForm('service_id', 'template_id', this)
+    .then(function() {
+      console.log('Email successfully sent!');
+    }, function(error) {
+      console.log('Failed to send email:', error);
+    });
+});
+var templateParams = {
+    from_name: document.getElementById('from_name').value,
+    subject: document.getElementById('subject').value,
+    message: document.getElementById('message').value,
+    user_email: document.getElementById('user_email').value,
+    phone_number: document.getElementById('phone_number').value,
+    town: document.getElementById('town').value,
+    postal_code: document.getElementById('postal_code').value
+};
