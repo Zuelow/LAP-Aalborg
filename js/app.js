@@ -1,10 +1,3 @@
-/* Theme Name: Mobirus - Responsive Landing Page Template
-   Author: Themesdesign
-   Version: 1.0.0
-   Created: December 2012
-   File Description: Main CSS file of the template
-*/
-
 ! function($) {
     "use strict";
 
@@ -59,7 +52,7 @@
 
     PogoApp.prototype.initFullPages = function() {
         $("#fullpage").fullpage({
-            anchors: ['1stPage', '2ndPage', '3rdPage', '4thPage', '5thPage'],
+            anchors: ['1stPage', '2ndPage', '3rdPage', '4thPage', '5thPage', '6thPage'],
             menu: '#menu',
             scrollingSpeed: 800,
             autoScrolling: true,
@@ -70,7 +63,7 @@
             paddingBottom: '80px',
             navigation: true,
             navigationPosition: 'right',
-            navigationTooltips: ['Hjem', 'Organisation', 'Features', 'Det-mener-LAP', 'Faq', 'Kontakt'],
+            navigationTooltips: ['Hjem', 'Organisation', 'Om LAP', 'Det mener LAP', 'Faq', 'Kontakt'],
             responsiveWidth: 1100,
         });
     },
@@ -146,3 +139,23 @@ function($) {
     "use strict";
     $.PogoApp.init();
 }(window.jQuery);
+const btn = document.getElementById('button');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_y3tqrmb';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Sent!');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+});
