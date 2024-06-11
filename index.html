@@ -441,6 +441,12 @@
   <div class="field" style="display: flex; flex-direction: column; align-items: center;">
     <label for="phone_number" style="font-size: 16px; color: white;">Telefon (valgfri):</label> <input type="tel" name="phone_number" id="phone_number" style="font-size: 16px; color: black; width: 300px;" title="Indtast kun tal">
   </div>
+  <div class="field" style="display: flex; flex-direction: column; align-items: center;">
+    <label for="town" style="font-size: 16px; color: white;">By:</label> <input type="text" name="town" id="town" style="font-size: 16px; color: black; width: 300px;" required>
+  </div>
+  <div class="field" style="display: flex; flex-direction: column; align-items: center;">
+    <label for="postal_code" style="font-size: 16px; color: white;">Postnummer:</label> <input type="text" name="postal_code" id="postal_code" style="font-size: 16px; color: black; width: 300px;" required>
+  </div>
   <input type="submit" id="button" value="Send Email" style="font-size: 16px; color: black;">
 </form>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
