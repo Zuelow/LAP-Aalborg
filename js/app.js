@@ -1,3 +1,10 @@
+/* Theme Name: Mobirus - Responsive Landing Page Template
+   Author: Themesdesign
+   Version: 1.0.0
+   Created: December 2012
+   File Description: Main CSS file of the template
+*/
+
 ! function($) {
     "use strict";
 
@@ -153,7 +160,7 @@ document.getElementById('form')
    emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
       btn.value = 'Send Email';
-      alert('Sent!');
+      alert('Sendt!');
     }, (err) => {
       btn.value = 'Send Email';
       alert(JSON.stringify(err));
