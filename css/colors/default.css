@@ -1,0 +1,18 @@
+/* Theme Name: Mobirus - Responsive Landing Page Template
+   Author: Themesdesign
+   Version: 1.0.0
+   Created: December 2012
+   File Description: Main CSS file of the template
+*/
+
+.text-custom,.btn-custom,.video-play-icon{
+    color: #10c469;
+}
+.btn-custom{
+    background: linear-gradient(to right, #10c469, #10c469) no-repeat;
+    background-size: 0% 100%;
+
+}
+.form-custom .form-control:focus,.btn-custom{
+    border-color: #10c469;
+}
